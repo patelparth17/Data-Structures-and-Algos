@@ -19,7 +19,7 @@ public:
         }
 
         
-        fun(ind+1,n,ds,ans,candidates,target);      //No repettition : Now look for those indices which do not contain the index element 
+        fun(ind+1,n,ds,ans,candidates,target);      //No repetition : Now look for those indices which do not contain the index element 
         
     }
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
