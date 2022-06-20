@@ -27,14 +27,14 @@ public:
     {
         if(ind==n)
         {
-            ans.push_back(ds);
+            ans.push_back(ds);  //Print the data structure in the ans if ind becomes n
             return;
         }
         
-        ds.push_back(nums[ind]);
+        ds.push_back(nums[ind]);    //Push nums[ind] and look for further combinations including nums[ind] on the increased index.
         fun(ind+1,n,ds,ans,nums);
+        ds.pop_back();              //Now pop nums[ind] and look for further combinations without nums[ind].
         
-        ds.pop_back();
         fun(ind+1,n,ds,ans,nums);
     }
     vector<vector<int>> subsets(vector<int>& nums) {
